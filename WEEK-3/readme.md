@@ -196,7 +196,7 @@
 | Single Core Throughput | 5.698112 Gigaiops   | 6.109621Gigaflops       |
 </p>
 
-<p>Dengan melihat tabel di atas, dapat dilihat bahwa IOPS memiliki total throughput dan throughput single core yang lebih tinggi dibandingkan dengan FLOPS. Namun demikian, perbedaan antara total throughput dan throughput single core juga penting untuk diperhatikan karena menunjukkan seberapa baik CPU dapat mengalokasikan dan memanfaatkan sumber daya secara efisien antara inti tunggal dan total throughput.</p>
+<p>Dengan melihat tabel di atas, dapat dilihat bahwa processor Ryzen 5 5600H dan menggunakannya 2 core dapat menghasilkan IOPS memiliki total throughput dan throughput single core yang lebih tinggi dibandingkan dengan FLOPS. Namun demikian, perbedaan antara total throughput dan throughput single core juga penting untuk diperhatikan karena menunjukkan seberapa baik CPU dapat mengalokasikan dan memanfaatkan sumber daya secara efisien antara inti tunggal dan total throughput.</p>
 
 **REFERENSI** 
 
