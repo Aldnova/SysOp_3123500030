@@ -93,73 +93,64 @@ Beberapa versi UNIX mempunyai utilitas sistem yang disebut top yang menyediakan 
     k – kill proses (dengan PID)
     q – quit
 
-Utilitas untuk melakukan pengontrolan proses dapat ditemukan pada sistem UNIX adalah perintah killall. Perintah ini akan menghentikan proses sesuai PID atau job number proses.
+`Utilitas untuk melakukan pengontrolan proses dapat ditemukan pada sistem UNIX adalah perintah killall. Perintah ini akan menghentikan proses sesuai PID atau job number proses.`
 
-1. Intruksi :
-   `$ yes /dev/null`
-
-   ![App Screenshot](./assets/1.png)
-
-   **Analisa :**
-   Hentikan sementara job (suspend), artinya bukan menghentikannya secara (terminate),tetapi menghentikan sementara job sampai di restart. Untuk menghentikan sementara job gunakan Ctrl-Z.
+### Percobaan 5 : Menghentikan & Memulai Kembali Job
 
 ---
 
-2. Intruksi :
-   `$ fg`
-   ![App Screenshot](./assets/2.png)
+### Percobaan 5 : Menghentikan dan Memulai Kembali Job
 
-    **Analisa :**
-    Untuk restart job pada foreground, gunakan perintah fg.
+1. Perintah `yes > /dev/null`
 
-3. Instruksi `bg`
+   ![App Screenshot](assets/1.png)
 
-    ![App Screenshot](./assets/3.png)
+   Analisa : Cara lain meletakkan job pada background dengan memulai job secara normal (pada foreground), stop job dan memulai lagi pada background. Gunakan perintah yes > /dev/null untuk memulai job baru. Hentikan sementara job (suspend), bukan menghentikannya (terminate), tetapi menghentikan sementara job sampai di restart. Untuk menghentikan sementara job gunakan Ctrl + Z
 
-    Analisa : 
-    Setelah instruksi `fg`, Shell akan menampilkan nama perintah yang diletakkan di *foreground*. Stop job lagi dengan *Ctrl + Z*. Kemudian gunakan perintah `bg` untuk meletakkan job pada *background*. 
-     
-    Instruksi `fg`
+2. Perintah `fg`
 
-    ![App Screenshot](./assets/4.png)
+   ![App Screenshot](assets/2.png)
 
-    Analisa : 
-    Job tidak bisa dihentikan dengan *Ctrl + Z* karena job berada pada *background*. Untuk menghentikannya, letakkan job pada *foreground* dengan `fg` dan kemudian hentikan sementara dengan *Ctrl + Z*.
+   Analisa: Perintah `fg` disini digunakan untuk me-restart job pada foreground.
 
-4. Instruksi `yes &`
+3. Perintah `bg`
 
-    ![App Screenshot](./assets/5.png)
+   ![App Screenshot](assets/3.png)
 
-    Analisa : 
-    Job pada *background* dapat digunakan untuk menampilkan teks pada terminal, dimana dapat diabaikan jika mencoba mengerjakan job lain seperti perintah di atas. Untuk menghentikannya tidak dapat menggunakan *Ctrl + C*. Job harus dipindah ke *foreground* baru diberhentikan dengan cara tekan `fg` dan tekan enter, Kemudian lanjutkan dengan *Ctrl + Z* untuk menghentikan sementara
+   Analisa : Setelah instruksi fg, Shell akan menampilkan nama perintah yang diletakkan di foreground. Stop job lagi dengan Ctrl + Z. Kemudian gunakan perintah bg untuk meletakkan job pada background.
 
-5. Instruksi `fg %2`, `bg %2` atau `%2`
+   Perintah `fg`
 
-    ![App Screenshot](./assets/6.png)
+   ![App Screenshot](assets/4.png)
 
-    Analisa : 
-    Perintah di atas digumakan apabila ingin menjalankan banyak job dalam satu waktu, letakkan job pada *foreground* atau *background* dengan memberikan job ID. 
+   Analisa : Job tidak bisa dihentikan dengan Ctrl + Z karena job berada pada background. Untuk menghentikannya, letakkan job pada foreground dengan fg dan kemudian hentikan sementara dengan Ctrl + Z.
 
-6. Instruksi `fg`
+4. Perintah `yes &`
 
-    ![App Screenshot](./assets/7.png)
+   ![App Screenshot](assets/5.png)
+   ![App Screenshot](assets/6.png)
+   Analisa : Job pada background dapat digunakan untuk menampilkan teks pada terminal, dimana dapat diabaikan jika mencoba mengerjakan job lain seperti perintah di atas. Untuk menghentikannya tidak dapat menggunakan Ctrl + C. Job harus dipindah ke foreground baru diberhentikan dengan cara tekan fg dan tekan enter, Kemudian lanjutkan dengan Ctrl + Z untuk menghentikan sementara
 
-    Analisa : 
-    tekan `fg` dan tekan *Enter*, kemudian dilanjutkan dengan *Ctrl-Z* untuk menghentikan sementara
+5. Perintah `fg %2`, `bg %2`, atau `%2`
 
-7. Instruksi `ps -fae`
+   ![App Screenshot](assets/7.png)
+   ![App Screenshot](assets/8.png)
 
-    ![App Screenshot](./assets/8.png)
+   Analisa : Perintah di atas digumakan apabila ingin menjalankan banyak job dalam satu waktu, letakkan job pada foreground atau background dengan memberikan job ID.
 
-    ![App Screenshot](./assets/9.png)
+6. Perintah `fg`
 
-    ![App Screenshot](./assets/11.png)
+   ![App Screenshot](assets/10.png)
 
-    Analisa : 
-    Lihat job dengan perintah `ps -fae` dan tekan Enter. Kemudian hentikan proses dengan perintah kill. Pada proses di atas proses yang dihentikan adalah proses dengan PID 6142, yaitu proses `yes > /dev/null`
+   Analisa : tekan fg dan tekan Enter, kemudian dilanjutkan dengan Ctrl-Z untuk menghentikan sementara
+
+7. Perintah `ps -fae`
+
+   ![App Screenshot](assets/11fix.png)
+
+   Analisa : Lihat job dengan perintah ps -fae dan tekan Enter. Kemudian hentikan proses dengan perintah kill. Pada proses di atas proses yang dihentikan adalah proses dengan PID 6142, yaitu proses yes > /dev/null
 
 8. Logout dan tekan Alt+F7 untuk kembali ke mode grafis
-
 
 ### Percobaan 6 : Percobaan dengan Penjadwalan Prioritas
 
@@ -191,7 +182,7 @@ Utilitas untuk melakukan pengontrolan proses dapat ditemukan pada sistem UNIX ad
 7. Pada terminal 1, bukalah program executable C++ dengan mengeti program `yes` dan tekan Enter.
 8. Ulangi langkah 7 untuk terminal 2.
 
-   ![App Screenshot](assets/18.png)
+   ![App Screenshot](assets/17.png)
 
 9. Jendela Top akan menampilkan dua program `yes` sebagai proses yang berjalan. Nilai %CPU sama pada keduanya. Hal ini berarti kedua proses mengkonsumsi waktu proses yang sama dan berjalan sama cepat. PID dari kedua proses akan berbeda, misalnya 2713 dan 2715. Kemudiani gunakan terminal 3 (yang tidak menjalankan primes maupun Jendela Top) dan ketik `renice 19 <PID terminal 1>` (contoh: `renice 19 2713`) dan diikuti Enter. Hal ini berarti mengganti penjadwalan prioritas dari proses ke 19.
 
@@ -203,33 +194,38 @@ Utilitas untuk melakukan pengontrolan proses dapat ditemukan pada sistem UNIX ad
 
 11. Program top juga mempunyai fungsi yang sama dengan program `renice`. Pilih jendela Top dan tekan `r`. Program top terdapat prompt PID to renice: tekan 2713 (ingat bahwa Anda harus mengganti 2713 dengan PID Anda sendiri) dan tekan Enter. Program top memberikan prompt `Renice` PID 2713 to value: tekan -19 dan tekan Enter.
 
-    ![App Screenshot](assets/img/p6_10.png)
-
-    ![App Screenshot](assets/img/p6_11.png)
+    ![App Screenshot](assets/21.png)
 
 12. Tunggu beberapa saat sampai top berubah dan lihat nilai %CPU pada kedua proses. Sekarang proses 2713 lebih cepat dari proses 2715. Kolom status menunjukkan penjadwalan prioritas lebih rendah (lebih cepat) dari nilai 0.
 
-    ![App Screenshot](assets/img/p6_12.png)
+    ![App Screenshot](assets/22.png)
 
 13. Pilih terminal 3 (yang sedang tidak menjalankan `yes` atau program top) dan ketik `nice -n -10 yes` dan Tekan Enter. Tunggu beberapa saat agar program top berubah dan akan terlihat proses primes ketiga. Misalnya PID nya 2714. Opsi -10 berada pada kolom NI (penjadwalan prioritas).
 
-    ![App Screenshot](assets/img/p6_13.png)
+    ![App Screenshot](assets/25a.png)
 
-    ![App Screenshot](assets/img/p6_14.png)
+    ![App Screenshot](assets/23.png)
 
 14. Jangan menggunakan mouse dan keyboard selama 10 detik. Program top menampilkan proses yang aktif selain program yes. Maka akan terlihat proses top terdaftar tetapi %CPU kecil (dibawah 1.0) dan konsisten. Juga terlihat proses berhubungan dengan dekstop grafis seperti X, panel dll.
 
-    ![App Screenshot](assets/img/p6_15.png)
+    ![App Screenshot](assets/24.png)
 
-15. Pindahkan mouse sehingga kursor berubah pada screen dan lihat apa yang terjadi dengan tampilan top. Proses tambahan akan muncul dan nilai %CPU berubah sebagai bagian grafis yang bekerja. Satu alasan adalah bahwa proses 2714 berjalan pada penjadwalan prioritas tinggi. Pilih jendela Top ketik `r`. PID to reniceL muncul prompt. Ketik 2714 (ubahlah 2714 dengan PID Anda) dan tekan Enter. Renice PID 2714 to value: muncul prompt. Ketik 0 dan tekan Enter. Sekarang pindahkan mouse ke sekeliling screen. Lihat perubahannya.
+15. Pindahkan mouse sehingga kursor berubah pada screen dan lihat apa yang terjadi dengan tampilan top.
+    Proses tambahan akan muncul dan nilai %CPU berubah sebagai bagian grafis yang bekerja. Satu alasan adalah bahwa proses 2714 berjalan pada penjadwalan prioritas tinggi.
+    ![App Screenshot](assets/25.png)
 
-    ![App Screenshot](assets/img/p6_16.png)
-
-    ![App Screenshot](assets/img/p6_17.png)
-
-    ![App Screenshot](assets/img/p6_18.png)
-
-    ![App Screenshot](assets/img/p6_19.png)
+Pilih jendela Top ketik `r`. PID to reniceL muncul prompt.
+Ketik 2714 (ubahlah 2714 dengan PID Anda) dan tekan Enter.
+![App Screenshot](assets/25a.png)
+Renice PID 2714 to value: muncul prompt. Ketik 0 dan tekan Enter.
+![App Screenshot](assets/25b.png)
+Sekarang pindahkan mouse ke sekeliling screen. Lihat perubahannya.
+![App Screenshot](assets/25c.png)
 
 16. Tutup semua terminal window.
+    ![App Screenshot](assets/26.png)
 17. Logout dan login kembali sebagai user.
+
+```
+Terimakasih.
+```
