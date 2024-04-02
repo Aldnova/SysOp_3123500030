@@ -20,9 +20,9 @@
 
 ### Table content
 
-- [week-1](week-1)
-- [week-2](week-2)
-- [week-3](week-3)
-- [week-4](week-4)
-- [week-5](week-5)
-- [week-6](week-6)
+- [week-1](WEEK-1)
+- [week-2](WEEK-2)
+- [week-3](WEEK-3)
+- [week-4](WEEK-4)
+- [week-5](WEEK-5)
+- [week-6](WEEK-6)
