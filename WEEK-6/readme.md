@@ -210,17 +210,31 @@ Beberapa versi UNIX mempunyai utilitas sistem yang disebut top yang menyediakan 
 
     ![App Screenshot](assets/24.png)
 
-15. Pindahkan mouse sehingga kursor berubah pada screen dan lihat apa yang terjadi dengan tampilan top.
-    Proses tambahan akan muncul dan nilai %CPU berubah sebagai bagian grafis yang bekerja. Satu alasan adalah bahwa proses 2714 berjalan pada penjadwalan prioritas tinggi.
-    ![App Screenshot](assets/25.png)
+15. Pindahkan mouse sehingga kursor berubah pada screen dan lihat apa yang terjadi dengan tampilan top. Proses tambahan akan muncul dan nilai %CPU berubah sebagai bagian grafis yang bekerja. Satu alasan adalah bahwa proses 2714 berjalan pada penjadwalan prioritas tinggi.
 
-Pilih jendela Top ketik `r`. PID to reniceL muncul prompt.
-Ketik 2714 (ubahlah 2714 dengan PID Anda) dan tekan Enter.
-![App Screenshot](assets/25a.png)
+<p align="center">
+  <img src="assets/25.png" alt="App Screenshot">
+</p>
+
+Pilih jendela Top ketik `r`. PID to reniceL muncul prompt. Ketik 2714 (ubahlah 2714 dengan PID Anda) dan tekan Enter.
+
+<p align="center">
+  <img src="assets/25a.png" alt="App Screenshot">
+</p>
+
 Renice PID 2714 to value: muncul prompt. Ketik 0 dan tekan Enter.
-![App Screenshot](assets/25b.png)
+
+<p align="center">
+  <img src="assets/25b.png" alt="App Screenshot">
+</p>
+
 Sekarang pindahkan mouse ke sekeliling screen. Lihat perubahannya.
-![App Screenshot](assets/25c.png)
+
+<p align="center">
+  <img src="assets/25c.png" alt="App Screenshot">
+</p>
+
+
 
 16. Tutup semua terminal window.
     ![App Screenshot](assets/26.png)
