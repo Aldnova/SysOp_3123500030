@@ -234,17 +234,15 @@ Sekarang pindahkan mouse ke sekeliling screen. Lihat perubahannya.
   <img src="assets/25c.png" alt="App Screenshot">
 </p>
 
-
-
 16. Tutup semua terminal window.
     ![App Screenshot](assets/26.png)
 17. Logout dan login kembali sebagai user.
 
-### Latihan 
+### Latihan
 
 1. Masuk ke tty2 dengan Ctrl+Alt+F2. Ketik ps –au dan tekan Enter. Kemudian
-perhatikan keluaran sebagai berikut :
-a. Sebutkan nama-nama proses yang bukan root
+   perhatikan keluaran sebagai berikut :
+   a. Sebutkan nama-nama proses yang bukan root
 
 ![App Screenshot](assets/lat/1.png)
 semua proses kecuali /bin/login -p-- adalah bukan root
@@ -253,23 +251,28 @@ b. Tulis PID dan COMMAND dari proses yang paling banyak menggunakan CPU
 time
 
 ![App Screenshot](assets/lat/1.png)
-````
-PID : 2353 
-````
-<br> COMMAND : /bin/login -p-- , dan -bash
+
+```
+PID : 2353
+COMMAND : /bin/login -p--
+```
 
 c. Sebutkan buyut proses dan PID dari proses tersebut
 
 ![App Screenshot](assets/lat/1.png)
-````
-/bin/login -p -- dengan PID 2353
-````
-  d. Sebutkan beberapa proses daemon
-````
-/bin/login -p -- dengan PID 2353
-````
 
- e. Pada prompt login lakukan hal - hal sebagai berikut :
+```
+/bin/login -p -- dengan PID 2353
+```
+
+d. Sebutkan beberapa proses daemon
+
+```
+/bin/login -p -- dengan PID 2353
+```
+
+e. Pada prompt login lakukan hal - hal sebagai berikut :
+
 - $ csh
 - $ who
 - $ bash
@@ -279,8 +282,8 @@ c. Sebutkan buyut proses dan PID dari proses tersebut
 
 ![App Screenshot](assets/lat/2.png)
 
-perintah `$ csh` adalah sebuah shell interaktif yang menawarkan lebih banyak sintaks dibandingkan dengan Bourne Shell. 
-perintah `$ bash` digunakan untuk mengkonversi instruksi yang dimasukkan ke dalam bahasa biner yang dapat dimengerti oleh kernel Linux. 
+perintah `$ csh` adalah sebuah shell interaktif yang menawarkan lebih banyak sintaks dibandingkan dengan Bourne Shell.
+perintah `$ bash` digunakan untuk mengkonversi instruksi yang dimasukkan ke dalam bahasa biner yang dapat dimengerti oleh kernel Linux.
 perintah `$ ls` digunakan untuk menunjukkan semua file yang terletak dalam direktori aktif.
 perintah `$ sh` adalah singkatan dari Bourne Shell, yang bertindak sebagai interpreter perintah atau shell standar di unix.
 perintah `$ ps` digunakan untuk menampilkan daftar proses yang sedang berlangsung dalam sistem. Tampilan dari perintah ps mencakup empat kolom utama: PID, TTY, TIME, dan CMD.
@@ -303,38 +306,37 @@ Untuk menampilkan keseluruhan proses yang berjalan kita menggunakan perintah $ps
 
 ![App Screenshot](assets/lat/4.png)
 
-  - `-j` format job
+- `-j` format job
 
 ![App Screenshot](assets/lat/5.png)
 
-  - `j` format job control
+- `j` format job control
 
 ![App Screenshot](assets/lat/6.png)
 
-  - `l` daftar memanjang
+- `l` daftar memanjang
 
 ![App Screenshot](assets/lat/7.png)
 
-  - `s` format sinyal
+- `s` format sinyal
 
 ![App Screenshot](assets/lat/8.png)
 
-  - `v` format virtual memory
+- `v` format virtual memory
 
 ![App Screenshot](assets/lat/9.png)
 
-  - `X` format register i386
+- `X` format register i386
 
 ![App Screenshot](assets/lat/10.png)
 
 3. Lakukan urutan pekerjaan berikut :
 
-    - Gunakan perintah `find` ke seluruh direktory pada sistem, belokkan output sehingga daftar direktori dialihkan ke file `directories.txt` dan daftar pesan error dialihkan ke file `errors.txt`
+   - Gunakan perintah `find` ke seluruh direktory pada sistem, belokkan output sehingga daftar direktori dialihkan ke file `directories.txt` dan daftar pesan error dialihkan ke file `errors.txt`
 
 ![App Screenshot](assets/lat/11.png)
 
-
-   Gunakan perintah `sleep 5`. Apa yang terjadi dengan perintah ini ?
+Gunakan perintah `sleep 5`. Apa yang terjadi dengan perintah ini ?
 
 ![App Screenshot](assets/lat/12.png)
 
@@ -342,43 +344,42 @@ Untuk menampilkan keseluruhan proses yang berjalan kita menggunakan perintah $ps
 
 ![App Screenshot](assets/lat/13.png)
 
-  - Jalankan `sleep 15` pada foreground, hentikan sementara dengan Ctrl-Z dan kemudian letakkan pada background dengan `bg`. Ketikkan `jobs`. Ketikkan `ps`. Kembalikan job ke foreground dengan perintah `fg`.
+- Jalankan `sleep 15` pada foreground, hentikan sementara dengan Ctrl-Z dan kemudian letakkan pada background dengan `bg`. Ketikkan `jobs`. Ketikkan `ps`. Kembalikan job ke foreground dengan perintah `fg`.
 
-      ![App Screenshot](assets/lat/14.png)
+  ![App Screenshot](assets/lat/14.png)
 
-    - Jalankan `sleep 15` pada background menggunakan `&` dan kemudian gunakan perintah `kill` untuk menghentikan proses diikuti job number.
+  - Jalankan `sleep 15` pada background menggunakan `&` dan kemudian gunakan perintah `kill` untuk menghentikan proses diikuti job number.
 
-      ![App Screenshot](assets/lat/15.png)
+    ![App Screenshot](assets/lat/15.png)
 
-    - Jalankan `sleep 15` pada background menggunakan `&` dan kemudian gunakan `kill` untuk menghentikan sementara proses. Gunakan `bg` untuk melanjutkan menjalankan proses.
+  - Jalankan `sleep 15` pada background menggunakan `&` dan kemudian gunakan `kill` untuk menghentikan sementara proses. Gunakan `bg` untuk melanjutkan menjalankan proses.
 
-      ![App Screenshot](assets/lat/16.png)
+    ![App Screenshot](assets/lat/16.png)
 
-    - Jalankan `sleep 60` pada background 5 kali dan terminasi semua pada dengan menggunakan perintah `killall`.
+  - Jalankan `sleep 60` pada background 5 kali dan terminasi semua pada dengan menggunakan perintah `killall`.
 
-      ![App Screenshot](assets/lat/18.png)
+    ![App Screenshot](assets/lat/18.png)
 
-    - Gunakan perintah `ps`, `w` dan `top` untuk menunjukkan semua proses yang sedang dieksekusi.
+  - Gunakan perintah `ps`, `w` dan `top` untuk menunjukkan semua proses yang sedang dieksekusi.
 
-      ![App Screenshot](assets/lat/19a.png)
+    ![App Screenshot](assets/lat/19a.png)
 
-      ![App Screenshot](assets/lat/19b.png)
+    ![App Screenshot](assets/lat/19b.png)
 
-    - Gunakan perintah `ps –aeH` untuk menampilkan hierarki proses. Carilah init proses. Apakah Anda bisa identifikasi sistem daemon yang penting ? Dapatkan Anda identifikasi shell dan subproses ?
+  - Gunakan perintah `ps –aeH` untuk menampilkan hierarki proses. Carilah init proses. Apakah Anda bisa identifikasi sistem daemon yang penting ? Dapatkan Anda identifikasi shell dan subproses ?
 
-      ![App Screenshot](assets/lat/20a.png)
+    ![App Screenshot](assets/lat/20a.png)
 
-      ![App Screenshot](assets/lat/20b.png)
+    ![App Screenshot](assets/lat/20b.png)
 
+  ![App Screenshot](assets/lat/20hasil.png)
 
-    ![App Screenshot](assets/lat/20hasil.png)
+  - Kombinasikan `ps –fae` dan grep, apa yang Anda lihat ?
 
-    - Kombinasikan `ps –fae` dan grep, apa yang Anda lihat ?
+    ![App Screenshot](assets/lat/21.png)
 
-      ![App Screenshot](assets/lat/21.png)
+  - Jalankan proses `sleep 300` pada background. Log off komputer dan log in kembali. Lihat daftar semua proses yang berjalan. Apa yang terjadi pada proses sleep ?
 
-    - Jalankan proses `sleep 300` pada background. Log off komputer dan log in kembali. Lihat daftar semua proses yang berjalan. Apa yang terjadi pada proses sleep ?
+    ![App Screenshot](assets/lat/22.png)
 
-      ![App Screenshot](assets/lat/22.png)
-
-      ![App Screenshot](assets/lat/22b.png)
+    ![App Screenshot](assets/lat/22b.png)
