@@ -234,12 +234,152 @@ Sekarang pindahkan mouse ke sekeliling screen. Lihat perubahannya.
   <img src="assets/25c.png" alt="App Screenshot">
 </p>
 
-
-
 16. Tutup semua terminal window.
     ![App Screenshot](assets/26.png)
 17. Logout dan login kembali sebagai user.
 
+### Latihan
+
+1. Masuk ke tty2 dengan Ctrl+Alt+F2. Ketik ps –au dan tekan Enter. Kemudian
+   perhatikan keluaran sebagai berikut :
+   a. Sebutkan nama-nama proses yang bukan root
+
+![App Screenshot](assets/lat/1.png)
+semua proses kecuali /bin/login -p-- adalah bukan root
+
+b. Tulis PID dan COMMAND dari proses yang paling banyak menggunakan CPU
+time
+
+![App Screenshot](assets/lat/1.png)
+
 ```
-Terimakasih.
+PID : 2353
+COMMAND : /bin/login -p--
 ```
+
+c. Sebutkan buyut proses dan PID dari proses tersebut
+
+![App Screenshot](assets/lat/1.png)
+
+```
+/bin/login -p -- dengan PID 2353
+```
+
+d. Sebutkan beberapa proses daemon
+
+```
+/bin/login -p -- dengan PID 2353
+```
+
+e. Pada prompt login lakukan hal - hal sebagai berikut :
+
+- $ csh
+- $ who
+- $ bash
+- $ ls
+- $ sh
+- $ ps
+
+![App Screenshot](assets/lat/2.png)
+
+perintah `$ csh` adalah sebuah shell interaktif yang menawarkan lebih banyak sintaks dibandingkan dengan Bourne Shell.
+perintah `$ bash` digunakan untuk mengkonversi instruksi yang dimasukkan ke dalam bahasa biner yang dapat dimengerti oleh kernel Linux.
+perintah `$ ls` digunakan untuk menunjukkan semua file yang terletak dalam direktori aktif.
+perintah `$ sh` adalah singkatan dari Bourne Shell, yang bertindak sebagai interpreter perintah atau shell standar di unix.
+perintah `$ ps` digunakan untuk menampilkan daftar proses yang sedang berlangsung dalam sistem. Tampilan dari perintah ps mencakup empat kolom utama: PID, TTY, TIME, dan CMD.
+Perintah `$ who`digunakan untuk menampilkan daftar pengguna yang saat ini login ke sistem. Ini menampilkan informasi seperti nama pengguna, terminal yang mereka gunakan, waktu login, dan sebagainya. Perintah ini sering digunakan untuk memeriksa siapa yang sedang menggunakan sistem atau untuk melihat apakah ada pengguna yang login secara tidak sah.
+
+f. Sebutkan PID yang paling besar dan kemudian buat urut - urutan proses sampai ke PPID = 1
+
+![App Screenshot](assets/lat/3.png)
+
+     - PID = 5887 (zsh)
+     - PID = 6582 (csh)
+     - PID = 6584 (bash)
+     - PID = 6587 (sh)
+     - PID = 6588 (ps)
+
+Untuk menampilkan keseluruhan proses yang berjalan kita menggunakan perintah $ps -au yang berfungsi untuk melihat seluruh proses yang berjalan dan didapatkan PID terbesar adalah 2683 dan PPID atau parent PID adalah 1162.
+
+2.  Cobalah format tampilan ps dengan opsi berikut dan perhatikan hasil tampilannya :
+    - `-f` daftar penuh
+
+![App Screenshot](assets/lat/4.png)
+
+- `-j` format job
+
+![App Screenshot](assets/lat/5.png)
+
+- `j` format job control
+
+![App Screenshot](assets/lat/6.png)
+
+- `l` daftar memanjang
+
+![App Screenshot](assets/lat/7.png)
+
+- `s` format sinyal
+
+![App Screenshot](assets/lat/8.png)
+
+- `v` format virtual memory
+
+![App Screenshot](assets/lat/9.png)
+
+- `X` format register i386
+
+![App Screenshot](assets/lat/10.png)
+
+3. Lakukan urutan pekerjaan berikut :
+
+   - Gunakan perintah `find` ke seluruh direktory pada sistem, belokkan output sehingga daftar direktori dialihkan ke file `directories.txt` dan daftar pesan error dialihkan ke file `errors.txt`
+
+![App Screenshot](assets/lat/11.png)
+
+Gunakan perintah `sleep 5`. Apa yang terjadi dengan perintah ini ?
+
+![App Screenshot](assets/lat/12.png)
+
+- Jalankan perintah pada background menggunakan `&`
+
+![App Screenshot](assets/lat/13.png)
+
+- Jalankan `sleep 15` pada foreground, hentikan sementara dengan Ctrl-Z dan kemudian letakkan pada background dengan `bg`. Ketikkan `jobs`. Ketikkan `ps`. Kembalikan job ke foreground dengan perintah `fg`.
+
+  ![App Screenshot](assets/lat/14.png)
+
+  - Jalankan `sleep 15` pada background menggunakan `&` dan kemudian gunakan perintah `kill` untuk menghentikan proses diikuti job number.
+
+    ![App Screenshot](assets/lat/15.png)
+
+  - Jalankan `sleep 15` pada background menggunakan `&` dan kemudian gunakan `kill` untuk menghentikan sementara proses. Gunakan `bg` untuk melanjutkan menjalankan proses.
+
+    ![App Screenshot](assets/lat/16.png)
+
+  - Jalankan `sleep 60` pada background 5 kali dan terminasi semua pada dengan menggunakan perintah `killall`.
+
+    ![App Screenshot](assets/lat/18.png)
+
+  - Gunakan perintah `ps`, `w` dan `top` untuk menunjukkan semua proses yang sedang dieksekusi.
+
+    ![App Screenshot](assets/lat/19a.png)
+
+    ![App Screenshot](assets/lat/19b.png)
+
+  - Gunakan perintah `ps –aeH` untuk menampilkan hierarki proses. Carilah init proses. Apakah Anda bisa identifikasi sistem daemon yang penting ? Dapatkan Anda identifikasi shell dan subproses ?
+
+    ![App Screenshot](assets/lat/20a.png)
+
+    ![App Screenshot](assets/lat/20b.png)
+
+  ![App Screenshot](assets/lat/20hasil.png)
+
+  - Kombinasikan `ps –fae` dan grep, apa yang Anda lihat ?
+
+    ![App Screenshot](assets/lat/21.png)
+
+  - Jalankan proses `sleep 300` pada background. Log off komputer dan log in kembali. Lihat daftar semua proses yang berjalan. Apa yang terjadi pada proses sleep ?
+
+    ![App Screenshot](assets/lat/22.png)
+
+    ![App Screenshot](assets/lat/22b.png)
