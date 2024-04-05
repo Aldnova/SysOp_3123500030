@@ -101,9 +101,9 @@ Penggunaan Fork() dalam bahasa C, pemrogram harus memperhatikan pengelolaan pros
   <img src="assets/3.png" alt="App Screenshot">
 </p>
 
-
 Contoh program fork() :
 [implementasi waitpid()](forkwait.c)
+
 <p align="center">
   <img src="assets/4.png" alt="App Screenshot">
 </p>
@@ -837,7 +837,7 @@ Buatlah program perkalian 2 matriks [4 x 4] dalam bahasa C yang memanfaatkan `fo
 
 ---
 
-[Program Matriks C](week-5)
+[Program Matriks C](matriks.c)
 
 ```
 #include <stdio.h>
@@ -907,12 +907,13 @@ int main() {
 analisa :
 Progam tersebut untuk mengalika dua matriks 4x4
 dengan menggunakan proses
-anak untuk menghitung pada setiap elemen hal ini menggunakan 
+anak untuk menghitung pada setiap elemen hal ini menggunakan
 fungsi fork()
-````
+```
 
 Visualisasi Program
-````
+
+```
 Proses Induk
 │
 ├─> Fork Proses Anak 1 (untuk elemen [0][0])
@@ -925,4 +926,4 @@ Proses Induk
 │
 └─> Fork Proses Anak 16 (untuk elemen [3][3])
     └─ Hitung elemen [3][3] --> Keluar
-````  
+```
