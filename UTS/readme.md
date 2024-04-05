@@ -89,15 +89,24 @@ Manual: `$ man 3 exec`
 
 Contoh Parent Proses (pstree)
 
-![App Screenshot](assets/2.png)
+<p align="center">
+  <img src="assets/2.png" alt="App Screenshot">
+</p>
+
 <br><br>
 
 Penggunaan Fork() dalam bahasa C, pemrogram harus memperhatikan pengelolaan proses child dan parent secara seksama untuk menghindari kondisi seperti zombie, proses zombie dimana sebuah anak (child) telah menyelesaikan eksekusinya namun induk belum mematikan proses child tersebut, maka dari itu pemrogram harus menggunakan waitid() hal tersebut diperuntukan agar si child tidak menjadi Zombie, waitid() akan menghalangi parent berakhir sebelum child dan memungkinkan Sistem operasi untuk menghentikan semua sumber daya yang digunakan oleh child.
-![App Screenshot](assets/3.png)
+
+<p align="center">
+  <img src="assets/3.png" alt="App Screenshot">
+</p>
+
 
 Contoh program fork() :
-[implementasi waitpid()]()
-![App Screenshot](assets/4.png)
+[implementasi waitpid()](forkwait.c)
+<p align="center">
+  <img src="assets/4.png" alt="App Screenshot">
+</p>
 
 </p>
 
@@ -916,4 +925,4 @@ Proses Induk
 │
 └─> Fork Proses Anak 16 (untuk elemen [3][3])
     └─ Hitung elemen [3][3] --> Keluar
-````
+````  
