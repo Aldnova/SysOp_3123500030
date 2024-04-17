@@ -23,7 +23,7 @@ Setiap program atau bagian dari program yang sedang dieksekusi oleh CPU disebut 
 Untuk melihat seluruh proses yang sedang berjalan gunakan perintah `$ ps -e` .
 Bisa juga menggunakan perintah `$pstree | more` untuk melihat secara detil proses yang sefan berjalan dengan format **tree**.
 
-Setiap proses akan memilik **PID** Process ID). Apabila dibutuhkan Sebuah proses bisa memiliki proses anakan. Dalam hubungan tersebut proses dapat diibaratkan seperti orang tua (_parent_) dengan anak (_child_) yang turun temurun.
+Setiap proses akan memiliki **PID** (Process ID). Apabila dibutuhkan Sebuah proses bisa memiliki proses anakan. Dalam hubungan tersebut proses dapat diibaratkan seperti orang tua (_parent_) dengan anak (_child_) yang turun temurun.
 
 - Setiap proses memiliki parent dan child.
 - Setiap proses memiliki ID (_pid_) dan parent ID (_ppid_), kecuali proses `init` atau `systemd`.
@@ -121,7 +121,7 @@ Contoh program fork() :
 2. Cari Direktori dan Buat Folder baru untuk menyimpan file clone
    ![App Screenshot](assets/6.png)
 
-3. setelah membuat tempat untuk menyimpan file, silahkan kunjungi file (buka terminal) kemudian masukan instruksi "git clone https tujuan.git"
+x3. setelah membuat tempat untuk menyimpan file, silahkan kunjungi file (buka terminal) kemudian masukan instruksi "git clone https tujuan.git"
    ![App Screenshot](assets/7.png)
 
 4. tekan enter, dan tunggu proses clone serta Download selesai
@@ -767,7 +767,7 @@ _3. Fungsi main_
 _4.Deklarasi Variabel :_
 
 ```
-ada berberapa variabel antara lain :
+ada beberapa variabel antara lain :
 pid_t = childpid = untuk menyimpan ID proses anak dari panggilan fork()
 int = status = untuk menyimpan status keluar dari proses child.
 pid_t = wait_result = untuk menyimpan hasil dari pemanggilan wait(),
