@@ -30,4 +30,4 @@
 - [week-8](WEEK-8)
 - [week-9](WEEK-9)
 - [week-10](WEEK-10)
-- [week-11](WEEK-11)
+- [week-11](WEEk-11)
