@@ -60,15 +60,15 @@ Algoritma Round Robin beroperasi dengan menggunakan time quantum, yang pada dasa
 
 ##### Contoh perhitungan secara teori :
 
-![App Screenshot](img/SJF-Teori.png)
+![alt text](assets/7.png)
 
 ##### Hasil running
 
-![App Screenshot](img/running-SJF.png)
+![alt text](assets/8.png)
 
 ##### Flowchart
 
-![App Screenshot](img/SJF-Flowchart.jpg)
+![App Screenshot](assets/SJF-Flowchart.jpg)
 
 ##### Analisa
 
