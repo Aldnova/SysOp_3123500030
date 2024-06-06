@@ -26,11 +26,11 @@
 
 ### Flowchart sederhana
 
-![App Screenshot](assets/nonmutex.png)
+![alt text](assets/nonmutex.png)
 
 ### Output
 
-![alt text](assets/nonmutexout.png)
+![alt text](assets/nonmutexoutfix.png)
 
 ### Analisa
 
